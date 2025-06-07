@@ -3,10 +3,14 @@ import exlogo from '../../src/assets/exlogo.png';
 import { FiSearch } from "react-icons/fi";
 import { FaRegHeart } from "react-icons/fa";
 import { HiMiniShoppingCart } from "react-icons/hi2";
+import Container from '../Layout/Container';
 
 const Navber = () => {
   return (
-    <nav className='w-[1170px] mx-auto mt-[40px]'>
+   <nav className=' pt-[43px] pb-[14px] border-b border-[#D9D9D9]'>
+
+    <Container>
+
      <div className='flex'>
 
      <div className='w-[20%] ' >
@@ -30,7 +34,7 @@ const Navber = () => {
 
      <div className='w-[40%]  relative'>
         <div className='w-[243px] relative'>
-            <input className='w-full bg-[#F5F5F5] rounded-sm  py-[7px] ' type="text" placeholder='What are you looking for?'/>
+            <input className='w-full bg-[#F5F5F5] rounded-sm  py-[7px] pr-[82px] ' type="text" placeholder='What are you looking for?'/>
 
             <FiSearch 
               size={24}
@@ -56,7 +60,9 @@ const Navber = () => {
      </div>
 
      </div>
-    </nav>
+     
+    </Container>
+   </nav>
   )
 }
 
