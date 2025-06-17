@@ -2,7 +2,7 @@ import React from 'react'
 
 const BannerRight = () => {
   return (
-    <div className='w-[80%] bg-green-300'>
+    <div className='w-[80%] bg-green-00'>
       BannerRight
     </div>
   )
