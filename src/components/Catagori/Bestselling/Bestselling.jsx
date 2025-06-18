@@ -60,7 +60,7 @@ const Bestselling = () => {
 
             <div className='mt-4'>
                 <p className=' font-primary font-medium'>The north coat</p>
-                <p className='font-primary font-medium py-2'>$260 <del className='text-[#7D8184]'>$360</del>   </p>
+                <p className='font-primary font-medium py-2 text-primary'>$260 <del className='text-[#7D8184]'>$360</del>   </p>
                 <div className='flex items-center'>
                     <FaStarHalfStroke  className='text-[#FFAD33]'/>
                     <FaStarHalfStroke  className='text-[#FFAD33]' />
@@ -101,8 +101,8 @@ const Bestselling = () => {
             
 
             <div className='mt-4'>
-                <p className=' font-primary font-medium'>The north coat</p>
-                <p className='font-primary font-medium py-2'>$260 <del className='text-[#7D8184]'>$360</del>   </p>
+                <p className=' font-primary font-medium'>Gucci duffle bag</p>
+                <p className='font-primary font-medium py-2 text-primary'>$960 <del className='text-[#7D8184]'>$1160</del>   </p>
                 <div className='flex items-center'>
                     <FaStarHalfStroke  className='text-[#FFAD33]'/>
                     <FaStarHalfStroke  className='text-[#FFAD33]' />
@@ -143,8 +143,8 @@ const Bestselling = () => {
             
 
             <div className='mt-4'>
-                <p className=' font-primary font-medium'>The north coat</p>
-                <p className='font-primary font-medium py-2'>$260 <del className='text-[#7D8184]'>$360</del>   </p>
+                <p className=' font-primary font-medium'>RGB liquid CPU Cooler</p>
+                <p className='font-primary font-medium py-2 text-primary'>$160 <del className='text-[#7D8184]'>$170</del>   </p>
                 <div className='flex items-center'>
                     <FaStarHalfStroke  className='text-[#FFAD33]'/>
                     <FaStarHalfStroke  className='text-[#FFAD33]' />
@@ -185,8 +185,8 @@ const Bestselling = () => {
             
 
             <div className='mt-4'>
-                <p className=' font-primary font-medium'>The north coat</p>
-                <p className='font-primary font-medium py-2'>$260 <del className='text-[#7D8184]'>$360</del>   </p>
+                <p className=' font-primary font-medium'>Small BookSelf</p>
+                <p className='font-primary font-medium py-2 text-primary'>$360 </p>
                 <div className='flex items-center'>
                     <FaStarHalfStroke  className='text-[#FFAD33]'/>
                     <FaStarHalfStroke  className='text-[#FFAD33]' />
