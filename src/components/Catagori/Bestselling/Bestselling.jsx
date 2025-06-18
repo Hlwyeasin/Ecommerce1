@@ -4,6 +4,9 @@ import sellingimag from "../../../assets/selling image  1.png";
 import { FaStarHalfStroke } from "react-icons/fa6";
 import { FaRegHeart } from "react-icons/fa6";
 import { LiaEyeSolid } from "react-icons/lia";
+import selligimage2 from "../../../assets/selling imag2.png";
+import sellingimage03 from "../../../assets/selling imge03.png";
+import sellingimge04 from "../../../assets/selling image04.png";
 
 const Bestselling = () => {
   return (
@@ -34,7 +37,9 @@ const Bestselling = () => {
 
            {/* card part  */}
 
-           <div className=' relative w-[270px]'>
+           <div className='flex justify-between mt-[60px]'>
+
+            <div className=' relative w-[270px]'>
            
            <div className='absolute top-3 right-3'>
             <div className='w-[34px] h-[34px] rounded-full bg-white-400 flex justify-center items-center'>
@@ -73,6 +78,134 @@ const Bestselling = () => {
 
 
 
+
+           </div>
+
+            <div className=' relative w-[270px]'>
+           
+           <div className='absolute top-3 right-3'>
+            <div className='w-[34px] h-[34px] rounded-full bg-white-400 flex justify-center items-center'>
+                <FaRegHeart size={22} />
+
+            </div>
+            <div className=' mt-2 w-[34px] h-[34px] rounded-full bg-white-400 flex justify-center items-center'>
+                <LiaEyeSolid size={22}/>
+
+            </div>
+
+           </div>
+
+            <div className='bg-[#F5F5F5] py-[52px] px-[65px] rounded'>
+                <img src={selligimage2} alt="" />
+            </div>
+            
+
+            <div className='mt-4'>
+                <p className=' font-primary font-medium'>The north coat</p>
+                <p className='font-primary font-medium py-2'>$260 <del className='text-[#7D8184]'>$360</del>   </p>
+                <div className='flex items-center'>
+                    <FaStarHalfStroke  className='text-[#FFAD33]'/>
+                    <FaStarHalfStroke  className='text-[#FFAD33]' />
+                    <FaStarHalfStroke  className='text-[#FFAD33]' />
+                    <FaStarHalfStroke  className='text-[#FFAD33]'/>
+                    <FaStarHalfStroke  className='text-[#FFAD33]'/>
+                    <p className='  ml-2 font-primary font-medium text-[#7D8184]'>(65)</p>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+           </div>
+
+            <div className=' relative w-[270px]'>
+           
+           <div className='absolute top-3 right-3'>
+            <div className='w-[34px] h-[34px] rounded-full bg-white-400 flex justify-center items-center'>
+                <FaRegHeart size={22} />
+
+            </div>
+            <div className=' mt-2 w-[34px] h-[34px] rounded-full bg-white-400 flex justify-center items-center'>
+                <LiaEyeSolid size={22}/>
+
+            </div>
+
+           </div>
+
+            <div className='bg-[#F5F5F5] py-[52px] px-[65px] rounded'>
+                <img src={sellingimage03} alt="" />
+            </div>
+            
+
+            <div className='mt-4'>
+                <p className=' font-primary font-medium'>The north coat</p>
+                <p className='font-primary font-medium py-2'>$260 <del className='text-[#7D8184]'>$360</del>   </p>
+                <div className='flex items-center'>
+                    <FaStarHalfStroke  className='text-[#FFAD33]'/>
+                    <FaStarHalfStroke  className='text-[#FFAD33]' />
+                    <FaStarHalfStroke  className='text-[#FFAD33]' />
+                    <FaStarHalfStroke  className='text-[#FFAD33]'/>
+                    <FaStarHalfStroke  className='text-[#FFAD33]'/>
+                    <p className='  ml-2 font-primary font-medium text-[#7D8184]'>(65)</p>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+           </div>
+
+            <div className=' relative w-[270px]'>
+           
+           <div className='absolute top-3 right-3'>
+            <div className='w-[34px] h-[34px] rounded-full bg-white-400 flex justify-center items-center'>
+                <FaRegHeart size={22} />
+
+            </div>
+            <div className=' mt-2 w-[34px] h-[34px] rounded-full bg-white-400 flex justify-center items-center'>
+                <LiaEyeSolid size={22}/>
+
+            </div>
+
+           </div>
+
+            <div className='bg-[#F5F5F5] py-[52px] px-[65px] rounded'>
+                <img src={sellingimge04} alt="" />
+            </div>
+            
+
+            <div className='mt-4'>
+                <p className=' font-primary font-medium'>The north coat</p>
+                <p className='font-primary font-medium py-2'>$260 <del className='text-[#7D8184]'>$360</del>   </p>
+                <div className='flex items-center'>
+                    <FaStarHalfStroke  className='text-[#FFAD33]'/>
+                    <FaStarHalfStroke  className='text-[#FFAD33]' />
+                    <FaStarHalfStroke  className='text-[#FFAD33]' />
+                    <FaStarHalfStroke  className='text-[#FFAD33]'/>
+                    <FaStarHalfStroke  className='text-[#FFAD33]'/>
+                    <p className='  ml-2 font-primary font-medium text-[#7D8184]'>(65)</p>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+           </div>
 
            </div>
 
