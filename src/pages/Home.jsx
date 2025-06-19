@@ -4,6 +4,7 @@ import Navber from '../Navber/Navber'
 import Banner from '../Banner/Banner'
 import Catagories from '../components/Catagori/Catagories'
 import Bestselling from '../components/Catagori/Bestselling/Bestselling'
+import Offer from '../components/Offer/Offer'
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Banner></Banner>
       <Catagories></Catagories>
       <Bestselling></Bestselling>
+      <Offer></Offer>
   
     </>
   )
