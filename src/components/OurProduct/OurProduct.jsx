@@ -36,10 +36,11 @@ const OurProduct = () => {
         {/* card part start */}
         
 
-        <div className='flex justify-between'>
+        <div className='flex justify-between mt-[60px]'>
+
 
               <div className=" relative w-[270px]">
-            <div className="absolute top-3 right-3">
+            <div className="absolute top-3 right-3 z-[999]">
               <div className="w-[34px] h-[34px] rounded-full bg-white-400 flex justify-center items-center">
                 <FaRegHeart size={22} />
               </div>
@@ -48,8 +49,11 @@ const OurProduct = () => {
               </div>
             </div>
 
-            <div className="bg-[#F5F5F5] py-[52px] px-[65px] rounded">
+            <div className="bg-[#F5F5F5] group relative py-[52px] px-[65px] rounded">
               <img src={image01} alt="" />
+              <div className='absolute bottom-0 left-0 w-full hidden group-hover:block'>
+                <p className='bg-black text-white font-primary font-medium py-2 text-center'>Add To Cart</p>
+              </div>
               
             </div>
 
@@ -147,8 +151,8 @@ const OurProduct = () => {
               </div>
             </div>
 
-            <div className="bg-[#F5F5F5] py-[52px] px-[65px] rounded">
-               <img src={image04} alt="" />
+            <div className="bg-[#F5F5F5] py-[32px] px-[75px] rounded">
+               <img className='w-full' src={image04} alt="" />
               
             </div>
 
@@ -170,9 +174,13 @@ const OurProduct = () => {
             </div>
           </div>
 
+
         </div>
 
-         
+         <div className='text-center mt-[60px]'>
+           <button className=' bg-primary text-white font-primary 
+            font-medium py-4 px-[48px] text-center rounded' >View All Products</button>
+         </div>
         
       </Container>
     </div>

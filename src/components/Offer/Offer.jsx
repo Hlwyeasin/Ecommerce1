@@ -5,7 +5,7 @@ import RanderTime from './RanderTime';
 
 const Offer = () => {
   return (
-    <>
+    <div className='pt-[122px] pb-[161px]'>
 <Container>
     <div className='bg-[url(./assets/offerbackground.png)] w-[1170px] h-[500px] mt-[172px] bg-cover bg-no-repeat bg-center mb-[161px]'>
             
@@ -32,7 +32,7 @@ const Offer = () => {
     
     
 </Container>
-    </>
+    </div>
   )
 }
 
