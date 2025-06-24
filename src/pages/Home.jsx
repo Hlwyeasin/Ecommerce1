@@ -6,6 +6,8 @@ import Catagories from '../components/Catagori/Catagories'
 import Bestselling from '../components/Catagori/Bestselling/Bestselling'
 import Offer from '../components/Offer/Offer'
 import OurProduct from '../components/OurProduct/OurProduct'
+import Arival from '../components/Arival/Arival'
+import Delevairy from '../components/Delevairy/Delevairy'
 
 const Home = () => {
   return (
@@ -17,6 +19,8 @@ const Home = () => {
       <Bestselling></Bestselling>
       <Offer></Offer>
       <OurProduct></OurProduct>
+      <Arival></Arival>
+      <Delevairy></Delevairy>
   
     </>
   )
