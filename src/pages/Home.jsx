@@ -7,7 +7,10 @@ import Bestselling from '../components/Catagori/Bestselling/Bestselling'
 import Offer from '../components/Offer/Offer'
 import OurProduct from '../components/OurProduct/OurProduct'
 import Arival from '../components/Arival/Arival'
-import Delevairy from '../components/Delevairy/Delevairy'
+import Service from '../components/Service/Service'
+import Footer from '../components/Footer/Footer'
+
+
 
 const Home = () => {
   return (
@@ -20,8 +23,14 @@ const Home = () => {
       <Offer></Offer>
       <OurProduct></OurProduct>
       <Arival></Arival>
-      <Delevairy></Delevairy>
-  
+      <Service ></Service>
+      <Footer></Footer>
+     
+      
+ 
+      
+      
+     
     </>
   )
 }
