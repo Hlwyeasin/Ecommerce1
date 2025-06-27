@@ -225,10 +225,10 @@ const quickList = [
   return (
 	<div className='bg-black'>
 		<Container>
-			<div className="flex justify-between">
+			<div className="flex justify-between  text-white">
 					<div className="max-w-[217px]">
-						{/* <Logo className={`text-white`} /> */}
-						{<Logo className={'text-black'}></Logo>}
+					
+						{<Logo className={'text-white'}></Logo>}
 
 						<h3 className="font-primary font-medium leading-[28px] my-6 text-[20px] text-secondary ">
 							Subscribe
@@ -312,9 +312,9 @@ const quickList = [
 								</div>
 							</div>
 						</div>
-						<div className="flex gap-x-6 mt-6">
+						<div className="flex gap-x-6 mt-6 ">
 							<a href="#">
-								<FaFacebookF color="ffffff" size={22} />
+								<FaFacebookF  color="ffffff" size={22} />
 							</a>
 							<a href="#">
 								<FiTwitter color="ffffff" size={22} />
@@ -328,6 +328,7 @@ const quickList = [
 						</div>
 					</div>
 				</div>
+
 				<div className="w-full h-[1px] mt-15 bg-[#3d3d3d] "></div>
 				<p className="text-center mt-4 font-primary leading-6 text-[#3d3d3d] ">© Copyright yeasin 2024. All right reserved</p>
 
