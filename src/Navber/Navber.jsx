@@ -4,6 +4,7 @@ import { FiSearch } from "react-icons/fi";
 import { FaRegHeart } from "react-icons/fa";
 import { HiMiniShoppingCart } from "react-icons/hi2";
 import Container from '../Layout/Container';
+import { Link } from 'react-router';
 
 const Navber = () => {
   return (
@@ -11,7 +12,7 @@ const Navber = () => {
 
     <Container>
 
-     <div className='flex'>
+     <div className='flex '>
 
      <div className='w-[20%] ' >
         <img src={exlogo} alt="exlogo" />
@@ -20,11 +21,24 @@ const Navber = () => {
 
 
      <div className='w-[40%] font-primary text-base '>
-        <ul className='flex gap-x-[48px] items-center'>
-            <li><a href="">Home</a></li>
-            <li><a href="">Contact</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Sign Up</a></li>
+        <ul className='flex gap-x-[38px] items-center'>
+
+
+            <li><Link Link to="/">Home </Link>
+            </li>
+
+            <li><Link Link to="/product">Product</Link>
+
+            </li>
+
+            <li><Link Link to="">Contact</Link>
+            </li>
+
+            <li><Link Link to="">About</Link>
+            </li>
+
+            <li><Link Link to="">Sign Up</Link>
+            </li>
             
         </ul>
         

@@ -40,11 +40,13 @@ const BannerLeft = () => {
   return (
     <div className="w-20% relative after:absolute after:content-[''] after:top-[-40px]
      after:right-0 after:w-[1px] after:h-[384px] after:bg-gray-400">
+
        {
         catagoriesData.map((category)=>(
             <p className='font-primary mb-4'>{category.name}</p>
         ))
        }
+       
     </div>
   )
 }

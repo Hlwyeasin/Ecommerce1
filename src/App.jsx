@@ -1,20 +1,16 @@
+import './App.css';
 
-import './App.css'
+import { RouterProvider } from 'react-router';
+import router from './components/Routes/Routes';
 
 
-import Home from './pages/Home'
 
 function App() {
- 
-
   return (
     <>
-       <Home></Home>
-      
-      
-
+        <RouterProvider router={router} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
