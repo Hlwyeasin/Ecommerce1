@@ -174,60 +174,60 @@ import applestore from "../../assets/appleStore.png";
 import qrcode from "../../assets/qrCode.png";
 import logo from "../Logo/Logo"
 import Logo from '../Logo/Logo';
-// import Logo from '../Logo/Logo';
- 
+
+
 
 
 const Footer = () => {
 	const supportList = [
-	{
-		des: "111 Bijoy sarani, Dhaka,  DH 1515, Bangladesh.",
-	},
-	{
-		des: "exclusive@gmail.com",
-	},
-	{
-		des: "+88015-88888-9999",
-	},
-];
-const accountList = [
-	{
-		des: "My Account",
-	},
-	{
-		des: "Login / Register",
-	},
-	{
-		des: "Cart",
-	},
-	{
-		des: "Wishlist",
-	},
-	{
-		des: "Shop",
-	},
-];
-const quickList = [
-	{
-		des: "Privacy Policy",
-	},
-	{
-		des: "Terms Of Use",
-	},
-	{
-		des: "FAQ",
-	},
-	{
-		des: "Contact",
-	},
-];
+		{
+			des: "111 Bijoy sarani, Dhaka,  DH 1515, Bangladesh.",
+		},
+		{
+			des: "exclusive@gmail.com",
+		},
+		{
+			des: "+88015-88888-9999",
+		},
+	];
+	const accountList = [
+		{
+			des: "My Account",
+		},
+		{
+			des: "Login / Register",
+		},
+		{
+			des: "Cart",
+		},
+		{
+			des: "Wishlist",
+		},
+		{
+			des: "Shop",
+		},
+	];
+	const quickList = [
+		{
+			des: "Privacy Policy",
+		},
+		{
+			des: "Terms Of Use",
+		},
+		{
+			des: "FAQ",
+		},
+		{
+			des: "Contact",
+		},
+	];
 
-  return (
-	<div className='bg-black'>
-		<Container>
-			<div className="flex justify-between  text-white">
+	return (
+		<div className='bg-black'>
+			<Container>
+				<div className="flex justify-between  text-white">
 					<div className="max-w-[217px]">
-					
+
 						{<Logo className={'text-white'}></Logo>}
 
 						<h3 className="font-primary font-medium leading-[28px] my-6 text-[20px] text-secondary ">
@@ -314,7 +314,7 @@ const quickList = [
 						</div>
 						<div className="flex gap-x-6 mt-6 ">
 							<a href="#">
-								<FaFacebookF  color="ffffff" size={22} />
+								<FaFacebookF color="ffffff" size={22} />
 							</a>
 							<a href="#">
 								<FiTwitter color="ffffff" size={22} />
@@ -332,10 +332,10 @@ const quickList = [
 				<div className="w-full h-[1px] mt-15 bg-[#3d3d3d] "></div>
 				<p className="text-center mt-4 font-primary leading-6 text-[#3d3d3d] ">© Copyright yeasin 2024. All right reserved</p>
 
-	  
-		</Container>
-	</div>
-  )
+
+			</Container>
+		</div>
+	)
 }
 
 export default Footer
