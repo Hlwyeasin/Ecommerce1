@@ -31,7 +31,7 @@ const Navber = () => {
 
             </li>
 
-            <li><Link Link to="">Contact</Link>
+            <li><Link Link to="/contact">Contact</Link>
             </li>
 
             <li><Link Link to="">About</Link>

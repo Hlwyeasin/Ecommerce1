@@ -7,12 +7,12 @@ const Product = () => {
   return (
     <Container>
 
-        <div className='py-30 flex'>
+      <div className='py-30 flex'>
 
-      <div className='w-[30%]'> <ProductLfPart/></div>
-    <div className='w-[70%]'> <ProductRightPart/></div>
-           
-             </div>
+        <div className='w-[30%]'> <ProductLfPart /></div>
+        <div className='w-[70%]'> <ProductRightPart /></div>
+
+      </div>
     </Container>
   )
 }

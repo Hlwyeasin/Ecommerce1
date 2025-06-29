@@ -59,7 +59,7 @@ const ProductLfPart = () => {
           <div className='w-[11px] h-[11px] rounded-full bg-[#00FF38]'></div>
           <p className='ml-[10px] font-primary'>Color 1</p>
         </div>
-        
+
 
 
       </div>
