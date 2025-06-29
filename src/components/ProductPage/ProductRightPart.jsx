@@ -16,7 +16,13 @@ const ProductRightPart = () => {
 
   return (
     <div>
-      <div className="flex justify-between mt-[60px] flex-wrap">
+      <div className="flex justify-between mt-[60px] flex-wrap relative">
+         <div className='flex items-center gap-x-3 top-[-60px] absolute right-0 z-40 mb-[30px]'>
+                    <p className='font-primary text-base leading-6'>Show : </p>
+                    <div>
+                        <input type="text" className='w-[97px] h-[29px] rounded-[5px] border border-[#D9D9D9] outline-0 text-center' />
+                    </div>
+                </div>
 
         {productData.map((product) => (
           <div className=" relative w-[270px] mb-[20px]">
