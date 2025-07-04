@@ -56,7 +56,7 @@ const ProductLfPart = () => {
           <p className='ml-[10px] font-primary'>Color 1</p>
         </div>
         <div className='flex items-center mb-[18px]'>
-          <div className='w-[11px] h-[11px] rounded-full bg-[#00FF38]'></div>
+          <div className='w-[11px] h-[11px] rounded-full bg-green-400'></div>
           <p className='ml-[10px] font-primary'>Color 1</p>
         </div>
 
