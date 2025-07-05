@@ -61,7 +61,7 @@ const ProductRightPart = () => {
             <div className="mt-4">
               <p className=" font-primary font-medium">{product.title}</p>
               <p className="font-primary font-medium py-2 text-primary">
-                ${product.price} <del className="text-green-500">$760</del>{" "}
+                ${product.price} <del className="text-green-500">${product.price}</del>{" "}
               </p>
 
               <div>
