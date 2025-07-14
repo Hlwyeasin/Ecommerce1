@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "../Layout/Container";
-import imges from "../../../fsssion-project/src/assets/chartCartMonitorimg.png";
+// import imges from "../assets/chartCartMonitorimg.png";
+
 import { IoChevronUpOutline } from "react-icons/io5";
 import { FaChevronDown } from "react-icons/fa";
 
@@ -20,7 +21,7 @@ const CartChart = () => {
           {/* scound list div */}
           <div className=" mt-5 flex items-center justify-between py-6 px-[40px] shadow-[0_1px_13px_rgba(0,0,0,0.1)]">
             <div className="w-[25%] flex items-center gap-x-5">
-              <img className="w-[54px]" src={imges} alt="" />
+              {/* <img className="w-[54px]" src={imges} alt="monitor" /> */}
               <p>LCD Monitor</p>
             </div>
             <div className="w-[25%]">$650</div>
@@ -40,7 +41,7 @@ const CartChart = () => {
           {/* third list div */}
           <div className=" mt-5 flex items-center justify-between py-6 px-[40px] shadow-[0_1px_13px_rgba(0,0,0,0.1)]">
             <div className="w-[25%] flex items-center gap-x-5">
-              <img className="w-[54px]" src={imges} alt="" />
+              {/* <img className="w-[54px]" src={imges} alt="" /> */}
               <p>LCD Monitor</p>
             </div>
             <div className="w-[25%]">$650</div>
@@ -60,7 +61,7 @@ const CartChart = () => {
           {/* four list div */}
           <div className=" mt-5 flex items-center justify-between py-6 px-[40px] shadow-[0_1px_13px_rgba(0,0,0,0.1)]">
             <div className="w-[25%] flex items-center gap-x-5">
-              <img className="w-[54px]" src={imges} alt="" />
+              {/* <img className="w-[54px]" src={imges} alt="" /> */}
               <p>LCD Monitor</p>
             </div>
             <div className="w-[25%]">$650</div>
