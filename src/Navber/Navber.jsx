@@ -24,7 +24,7 @@ const Navber = () => {
               </li>
 
               <li>
-                <Link Link to="/product">
+                <Link className="bg-green-600" Link to="/product">
                   Product
                 </Link>
               </li>
