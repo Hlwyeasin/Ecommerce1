@@ -5,8 +5,13 @@ import imagep from "../assets/chartCartMonitorimg.png";
 
 import { IoChevronUpOutline } from "react-icons/io5";
 import { FaChevronDown } from "react-icons/fa";
+import { useSelector } from "react-redux";
+import Product from "./Product";
 
 const CartChart = () => {
+  const data = useSelector((state) => state.cartDetails.cartItems);
+  console.log(data);
+
   return (
     <div className="py-20 font-primary">
       <Container>
@@ -20,9 +25,35 @@ const CartChart = () => {
           </div>
 
           {/* scound list div */}
-          <div className=" mt-5 flex items-center justify-between py-6 px-[40px] shadow-[0_1px_13px_rgba(0,0,0,0.1)]">
+
+         {
+          data.map((Product)=>(
+             <div className=" mt-5 flex items-center justify-between py-6 px-[40px] shadow-[0_1px_13px_rgba(0,0,0,0.1)]">
             <div className="w-[25%] flex items-center gap-x-5">
-              {/* <img className="w-[54px]" src={imges} alt="monitor" /> */}
+              <img className="w-[25%]" src={Product.thumbnail} alt="#monitor" />
+              <p>{Product.title}</p>
+            </div>
+            <div className="w-[25%]">${Product.price}</div>
+            <div className="w-[25%]">
+              <div className="border rounded py-[10px] px-[12px] inline-block">
+                <div className="flex items-center gap-x-4">
+                  <p>{Product.cartQun}</p>
+                  <div>
+                    <IoChevronUpOutline />
+                    <FaChevronDown />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="w-[25%]">$ {Product.price * Product.cartQun} </div>
+          </div>
+          ))
+         }
+          
+          {/* third list div */}
+
+          {/* <div className=" mt-5 flex items-center justify-between py-6 px-[40px] shadow-[0_1px_13px_rgba(0,0,0,0.1)]">
+            <div className="w-[25%] flex items-center gap-x-5">
               <img className="w-[25%]" src={imagep} alt="#monitor" />
               <p>LCD Monitor</p>
             </div>
@@ -39,33 +70,13 @@ const CartChart = () => {
               </div>
             </div>
             <div className="w-[25%]">$650</div>
-          </div>
-          {/* third list div */}
-          <div className=" mt-5 flex items-center justify-between py-6 px-[40px] shadow-[0_1px_13px_rgba(0,0,0,0.1)]">
-            <div className="w-[25%] flex items-center gap-x-5">
-              {/* <img className="w-[54px]" src={imges} alt="" /> */}
-                <img className="w-[25%]" src={imagep} alt="#monitor" />
-              <p>LCD Monitor</p>
-            </div>
-            <div className="w-[25%]">$650</div>
-            <div className="w-[25%]">
-              <div className="border rounded py-[10px] px-[12px] inline-block">
-                <div className="flex items-center gap-x-4">
-                  <p>01</p>
-                  <div>
-                    <IoChevronUpOutline />
-                    <FaChevronDown />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="w-[25%]">$650</div>
-          </div>
+          </div> */}
+
           {/* four list div */}
-          <div className=" mt-5 flex items-center justify-between py-6 px-[40px] shadow-[0_1px_13px_rgba(0,0,0,0.1)]">
+
+          {/* <div className=" mt-5 flex items-center justify-between py-6 px-[40px] shadow-[0_1px_13px_rgba(0,0,0,0.1)]">
             <div className="w-[25%] flex items-center gap-x-5">
-              {/* <img className="w-[54px]" src={imges} alt="" /> */}
-                <img className="w-[25%]" src={imagep} alt="#monitor" />
+              <img className="w-[25%]" src={imagep} alt="#monitor" />
               <p>LCD Monitor</p>
             </div>
             <div className="w-[25%]">$650</div>
@@ -81,7 +92,7 @@ const CartChart = () => {
               </div>
             </div>
             <div className="w-[25%]">$650</div>
-          </div>
+          </div> */}
 
           <div className="mt-10  flex">
             {/* div one copone code  */}

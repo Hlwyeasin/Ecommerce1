@@ -10,9 +10,14 @@ import Container from "../../Layout/Container";
 import { useParams } from "react-router";
 import Product from "../../pages/Product";
 import SingleProdRating from "./SingleProdRating";
+import {useDispatch} from "react-redux"
+import { cartTotal } from "../../Slices/cartSlice";
 
 const SingleProduDts = () => {
   const { id } = useParams();
+  console.log(id);
+  const dispatch = useDispatch()
+  
   const [productData, setProducData] = useState([]);
   const [selectedImg, setSeletedImg] = useState()
   useEffect(() => {
@@ -29,6 +34,11 @@ const SingleProduDts = () => {
         
        }
   },[singleProduct])
+  const handleAddToCart = (product) =>{
+    dispatch(cartTotal(product))
+    
+    
+  }
 
   return (
     <div className="py-30">
@@ -86,7 +96,7 @@ const SingleProduDts = () => {
             </p>
             <p className="font-primary mb-[24px]">{singleProduct?.description}</p>
             <div className="border-1 border-b"></div>
-             <button className="mt-10 py-4 px-[60px] bg-primary
+             <button onClick={()=>handleAddToCart (singleProduct)} className="mt-10 py-4 px-[60px] bg-primary
               text-white font-primary font-semibold rounded-lg cursor-pointer">Add to cart</button>
           </div>
         </div>
