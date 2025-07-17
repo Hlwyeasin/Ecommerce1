@@ -12,6 +12,19 @@ const CartChart = () => {
   const data = useSelector((state) => state.cartDetails.cartItems);
   console.log(data);
 
+  const  totalPrice = data.reduce ((prev, current)=>{
+    console.log(prev, "prev");
+
+    console.log(current.price, "current"); 
+
+    return prev + (current.price * current.cartQun)
+
+
+    
+  },0)
+  console.log(totalPrice);
+  
+
   return (
     <div className="py-20 font-primary">
       <Container>
@@ -117,7 +130,7 @@ const CartChart = () => {
 
               <div className="flex  justify-between  border-b py-4">
                 <p>Subtotal:</p>
-                <p>$1750</p>
+                <p>${totalPrice}</p>
               </div>
 
               <div className="flex justify-between border-b py-4">
@@ -125,9 +138,11 @@ const CartChart = () => {
                 <p>Free</p>
               </div>
 
-              <div className="flex justify-between ">
-                <p>Total:</p>
-                <p>$1750</p>
+              <div className=" relative flex justify-between ">
+                <div>
+                  <p >Total:</p>
+             <p>${totalPrice}</p>
+                </div>
 
                 <div className="mx-auto text-center">
                   <button
