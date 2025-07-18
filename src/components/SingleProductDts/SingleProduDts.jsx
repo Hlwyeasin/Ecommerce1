@@ -12,6 +12,7 @@ import Product from "../../pages/Product";
 import SingleProdRating from "./SingleProdRating";
 import {useDispatch} from "react-redux"
 import { cartTotal } from "../../Slices/cartSlice";
+ import { Bounce, ToastContainer, toast } from 'react-toastify';
 
 const SingleProduDts = () => {
   const { id } = useParams();
@@ -36,12 +37,25 @@ const SingleProduDts = () => {
   },[singleProduct])
   const handleAddToCart = (product) =>{
     dispatch(cartTotal(product))
-    
+    toast.success("add to chart")
     
   }
 
   return (
     <div className="py-30">
+        <ToastContainer
+        position="top-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick={false}
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="dark"
+transition={Bounce}
+         />
       <Container>
         <div className="grid grid-cols-12 row space-x-4">
           <div className="col-span-2">

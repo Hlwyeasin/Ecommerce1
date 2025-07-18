@@ -26,11 +26,19 @@ export const cartSlice = createSlice({
 
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
     },
+
     cartQuntity: (state,action)=>{
       console.log(state.cartItems);
       console.log(action.payload);
+      if(action.payload.type === "increment"){
+       console.log( state.cartItems);
+       state.cartItems[action.payload.id].cartQun += 1;  
+      }else{
+         state.cartItems[action.payload.id].cartQun -= 1; 
+      }
+       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
       
-    }
+    },
   },
 });
 
