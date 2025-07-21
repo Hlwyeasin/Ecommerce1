@@ -24,7 +24,7 @@ const Navber = () => {
               </li>
 
               <li>
-                <Link className="bg-green-600" Link to="/product">
+                <Link Link to="/product">
                   Product
                 </Link>
               </li>
@@ -42,9 +42,7 @@ const Navber = () => {
               </li>
 
               <li>
-                <Link Link to="">
-                  Sign Up
-                </Link>
+                <Link Link to="/signup"> signup</Link>
               </li>
             </ul>
           </div>

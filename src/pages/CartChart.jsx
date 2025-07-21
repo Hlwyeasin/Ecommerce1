@@ -10,7 +10,6 @@
 // const CartChart = () => {
 //    const notify = () => toast("Wow so easy!");
 //   const data = useSelector((state) => state.cartDetails.cartItems);
- 
 
 //   const totalPrice = data.reduce((prev, current) => {
 //     console.log(prev, "prev");
@@ -18,7 +17,6 @@
 
 //     return prev + current.price * current.cartQun;
 //   }, 0);
-
 
 //   return (
 //     <div className="py-20 font-primary">
@@ -101,10 +99,8 @@
 
 //                 <div className="mx-auto text-center">
 
+//                   <button
 
-//                   <button 
-                  
-                  
 //                     className="mt-10 py-4 px-[60px] bg-primary
 //               text-white font-primary font-semibold rounded-lg cursor-pointer"
 //                   >
@@ -123,68 +119,60 @@
 
 // export default CartChart;
 
-
-
 // ######################################new change wiht full code here #####################################################
 
-
-import React, { useState } from "react";
-import Container from "../Layout/Container";
-import { IoChevronUpOutline } from "react-icons/io5";
-import { FaChevronDown } from "react-icons/fa";
-import { useDispatch, useSelector } from "react-redux";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css"; // ✅ Import Toastify styles
-import { cartQuntity } from "../Slices/cartSlice";
+import React, { useState } from 'react';
+import Container from '../Layout/Container';
+import { IoChevronUpOutline } from 'react-icons/io5';
+import { FaChevronDown } from 'react-icons/fa';
+import { useDispatch, useSelector } from 'react-redux';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; // ✅ Import Toastify styles
+import { cartQuntity } from '../Slices/cartSlice';
 
 const CartChart = () => {
-  const notify = () => toast.success("Proceeding to checkout!", {
-    position: "top-left",
-    autoClose: 2000,
-    pauseOnHover: true,
-    draggable: true,
-  });
+  const notify = () =>
+    toast.success('Proceeding to checkout!', {
+      position: 'top-left',
+      autoClose: 2000,
+      pauseOnHover: true,
+      draggable: true,
+    });
 
   const data = useSelector((state) => state.cartDetails.cartItems);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-  const [couponText, setCouponText] = useState("");
+  const [couponText, setCouponText] = useState('');
   const [discount, setDiscount] = useState(0);
 
   const totalPrice = data.reduce((prev, current) => {
     return prev + current.price * current.cartQun;
   }, 0);
 
-const handleIncrement = (id) =>{
-  console.log("increment",id);
-  dispatch(cartQuntity( {id: id, type:"increment"}));
-  
-};
+  const handleIncrement = (id) => {
+    console.log('increment', id);
+    dispatch(cartQuntity({ id: id, type: 'increment' }));
+  };
 
-// #33##################Drecrement###############
+  // #33##################Drecrement###############
 
-const handleDecrement = (id) =>{
-  console.log("increment",id);
-  dispatch(cartQuntity( {id: id, type:"decrement"}));
-  
-};
+  const handleDecrement = (id) => {
+    console.log('increment', id);
+    dispatch(cartQuntity({ id: id, type: 'decrement' }));
+  };
 
-const handleChange = (e) =>{
-  setCouponText(e.target.value);
-  
-};
- const handleApplyCoupon = () =>{
-  console.log(couponText);
-  if(couponText == "fdr20"){
-    setDiscount(totalPrice * 0.2)
+  const handleChange = (e) => {
+    setCouponText(e.target.value);
+  };
+  const handleApplyCoupon = () => {
+    console.log(couponText);
+    if (couponText == 'fdr20') {
+      setDiscount(totalPrice * 0.2);
+    }
+  };
+  console.log(discount);
 
-  }
-  
- };
- console.log(discount);
-
- const total = totalPrice -discount
- 
+  const total = totalPrice - discount;
 
   return (
     <div className="py-20 font-primary">
@@ -208,7 +196,11 @@ const handleChange = (e) =>{
               className="mt-5 flex items-center justify-between py-6 px-[40px] shadow-[0_1px_13px_rgba(0,0,0,0.1)]"
             >
               <div className="w-[25%] flex items-center gap-x-5">
-                <img className="w-[25%]" src={product.thumbnail} alt="#monitor" />
+                <img
+                  className="w-[25%]"
+                  src={product.thumbnail}
+                  alt="#monitor"
+                />
                 <p>{product.title}</p>
               </div>
               <div className="w-[25%]">${product.price}</div>
@@ -217,8 +209,10 @@ const handleChange = (e) =>{
                   <div className="flex items-center gap-x-4">
                     <p>{product.cartQun}</p>
                     <div>
-                      <IoChevronUpOutline onClick={() => handleIncrement (index) } />
-                      <FaChevronDown onClick={() => handleDecrement (index) } />
+                      <IoChevronUpOutline
+                        onClick={() => handleIncrement(index)}
+                      />
+                      <FaChevronDown onClick={() => handleDecrement(index)} />
                     </div>
                   </div>
                 </div>
@@ -232,17 +226,15 @@ const handleChange = (e) =>{
             {/* Coupon Input */}
             <div>
               <input
-                    onChange={handleChange}
-                    // onChange={(e) =>setCouponText(e.target.value)}
-                    name="coupon"
-                   
-
+                onChange={handleChange}
+                // onChange={(e) =>setCouponText(e.target.value)}
+                name="coupon"
                 className="border py-4 rounded px-4"
                 type="text"
                 placeholder="Coupon Code"
               />
-              <button 
-                           onClick={handleApplyCoupon}
+              <button
+                onClick={handleApplyCoupon}
                 className="mt-10 ml-4 py-4 px-[60px] bg-primary text-white font-primary font-semibold rounded-lg cursor-pointer"
               >
                 Apply Coupon
@@ -289,4 +281,3 @@ const handleChange = (e) =>{
 };
 
 export default CartChart;
-

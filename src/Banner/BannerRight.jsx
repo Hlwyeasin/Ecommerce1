@@ -19,7 +19,7 @@ function SampleNextArrow(props) {
         background: "black",
         borderRadius: "50%",
         right: "-25px",
-        zIndex: 2
+        zIndex: 2,
       }}
       onClick={onClick}
     >
@@ -42,7 +42,7 @@ function SamplePrevArrow(props) {
         background: "gray",
         borderRadius: "50%",
         left: "-25px",
-        zIndex: 2
+        zIndex: 2,
       }}
       onClick={onClick}
     >
@@ -60,7 +60,7 @@ const BannerRight = () => {
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
-    appendDots: dots => (
+    appendDots: (dots) => (
       <div
         style={{
           position: "absolute",
@@ -71,13 +71,15 @@ const BannerRight = () => {
           alignItems: "center",
           padding: "5px",
           background: "rgba(0, 0, 0, 0.3)",
-          borderRadius: "10px"
+          borderRadius: "10px",
         }}
       >
-        <ul style={{ margin: 0, padding: 0, display: "flex", gap: "10px" }}>{dots}</ul>
+        <ul style={{ margin: 0, padding: 0, display: "flex", gap: "10px" }}>
+          {dots}
+        </ul>
       </div>
     ),
-    customPaging: i => (
+    customPaging: (i) => (
       <div
         style={{
           width: "20px",
@@ -87,12 +89,12 @@ const BannerRight = () => {
           color: "black",
           textAlign: "center",
           lineHeight: "20px",
-          fontSize: "12px"
+          fontSize: "12px",
         }}
       >
         {i + 1}
       </div>
-    )
+    ),
   };
 
   return (
@@ -100,8 +102,14 @@ const BannerRight = () => {
       <Slider {...settings}>
         {[1, 2, 3, 4].map((num) => (
           <div key={num} className="relative">
-            <img src={img} className="w-full h-[400px] object-cover" alt={`Slide ${num}`} />
-            <h3 className="absolute top-4 left-4 text-white text-2xl font-bold">Slide {num}</h3>
+            <img
+              src={img}
+              className="w-full h-[400px] object-cover"
+              alt={`Slide ${num}`}
+            />
+            <h3 className="absolute top-4 left-4 text-white text-2xl font-bold">
+              Slide {num}
+            </h3>
           </div>
         ))}
       </Slider>
