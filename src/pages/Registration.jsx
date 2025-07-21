@@ -1,5 +1,7 @@
 import React from "react";
 import signupimg from "../assets/signupimg.png";
+import { FcGoogle } from "react-icons/fc";
+
 
 const Registration = () => {
   return (
@@ -32,7 +34,20 @@ const Registration = () => {
               <div className="w-[370px] bg-primary py-[16px] text-center">
                  <button className="font-medium text-white rounded-lg">Create Account</button>
               </div>
+              
+                      <div className="mt-[16px] border-2 py-4 w-[371px] ">
 
+                      <div className="flex gap-x-4 items-center justify-center cursor-pointer">
+                          <FcGoogle />
+
+                        <h2 className="font-semibold">Sign up with Google</h2>
+                      </div>
+
+                      </div>
+
+
+
+                      <div className="mt-[32px] text-center font-medium">Already have account? <span>Log in</span></div>
             </div>
           </div>  
         </div>
