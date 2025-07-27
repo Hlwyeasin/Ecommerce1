@@ -1,28 +1,19 @@
-import React, { use, useState } from "react";
+import React, { useState } from "react";
 import signupimg from "../assets/signupimg.png";
 import { FcGoogle } from "react-icons/fc";
 import { Bounce, ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FiEye, FiEyeOff } from "react-icons/fi"; // 👁️‍🗨️ Eye icons
 import { Link } from "react-router";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
-const Registration = () => {
-  const auth = getAuth();
-  const [name, setName] = useState("");
+const login = () => {
   const [emaill, setEmaill] = useState("");
   const [passowrd, setPassword] = useState("");
 
-  const [nameErr, setNameErr] = useState("");
   const [emaillErr, setEmaillErr] = useState("");
   const [passwordErr, setPasswordErr] = useState("");
 
   const [showPassword, setShowPassword] = useState(false); // 👁️‍🗨️
-
-  const handleName = (e) => {
-    setName(e.target.value);
-    setNameErr("");
-  };
 
   const handleEmaill = (e) => {
     setEmaill(e.target.value);
@@ -35,10 +26,6 @@ const Registration = () => {
   };
 
   const handleCreatAccount = () => {
-    if (!name) {
-      setNameErr("Please fill the name");
-    }
-
     if (!emaill) {
       setEmaillErr("Please insert your email");
     } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emaill)) {
@@ -60,16 +47,7 @@ const Registration = () => {
     }
 
     if (name && emaill && passowrd) {
-      // toast.success("Registration Successfully done");
-      createUserWithEmailAndPassword(auth, email, password)
-        .then((user) => {
-          console.log(user);
-        })
-        .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          // ..
-        });
+      toast.success("Registration Successfully done");
     }
 
     console.log(emaill, name, passowrd);
@@ -97,22 +75,12 @@ const Registration = () => {
         </div>
 
         <div className="ml-[129px] mt-[125px]">
-          <h2 className="font-medium text-[36px]">Create an account</h2>
+          <h2 className="font-medium text-[36px]">Login in to Exclusive</h2>
           <p className="font-medium text-base mt-6 leading-6">
             Enter your details below
           </p>
 
           <div className="mt-[48px]">
-            <div>
-              <p className="text-red-500 text-sm">{nameErr}</p>
-              <input
-                onChange={handleName}
-                className="w-[370px] border-b focus:outline-0 py-2"
-                type="text"
-                placeholder="Enter your Name"
-              />
-            </div>
-
             <div className="my-[40px]">
               <input
                 onChange={handleEmaill}
@@ -145,7 +113,7 @@ const Registration = () => {
                 onClick={handleCreatAccount}
                 className="font-medium text-white rounded-lg"
               >
-                Create Account
+                Log in
               </button>
             </div>
 
@@ -157,7 +125,8 @@ const Registration = () => {
             </div>
 
             <div className="mt-[32px] text-center font-medium">
-              Already have account? <Link to="/signin"> Log in </Link>
+              <Link to="/signup">Create an Account.</Link>
+              <Link to="/forgotpassword"> Forgot password </Link>
             </div>
           </div>
         </div>
@@ -166,4 +135,4 @@ const Registration = () => {
   );
 };
 
-export default Registration;
+export default login;

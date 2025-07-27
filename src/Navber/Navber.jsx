@@ -42,7 +42,10 @@ const Navber = () => {
               </li>
 
               <li>
-                <Link Link to="/signup"> signup</Link>
+                <Link Link to="/signup">
+                  {" "}
+                  signup
+                </Link>
               </li>
             </ul>
           </div>
@@ -56,19 +59,17 @@ const Navber = () => {
               />
 
               <FiSearch size={24} className="absolute top-[5px] left-[185px]" />
-              
-              <Link to="CartChart">
 
-              <HiMiniShoppingCart
-                className="absolute top-[5px] left-[389px]"
-                size={24}
-              />
+              <Link to="CartChart">
+                <HiMiniShoppingCart
+                  className="absolute top-[5px] left-[389px]"
+                  size={24}
+                />
               </Link>
               <FaRegHeart
                 size={24}
                 className="absolute top-[5px] left-[305px]"
               />
-
             </div>
           </div>
         </div>

@@ -1,10 +1,10 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 export const cartSlice = createSlice({
-  name: "cart",
+  name: 'cart',
   initialState: {
-    cartItems: localStorage.getItem("cartItems")
-      ? JSON.parse(localStorage.getItem("cartItems"))
+    cartItems: localStorage.getItem('cartItems')
+      ? JSON.parse(localStorage.getItem('cartItems'))
       : [],
   },
   reducers: {
@@ -24,20 +24,19 @@ export const cartSlice = createSlice({
         state.cartItems.push({ ...action.payload, cartQun: 1 });
       }
 
-      localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
+      localStorage.setItem('cartItems', JSON.stringify(state.cartItems));
     },
 
-    cartQuntity: (state,action)=>{
+    cartQuntity: (state, action) => {
       console.log(state.cartItems);
       console.log(action.payload);
-      if(action.payload.type === "increment"){
-       console.log( state.cartItems);
-       state.cartItems[action.payload.id].cartQun += 1;  
-      }else{
-         state.cartItems[action.payload.id].cartQun -= 1; 
+      if (action.payload.type === 'increment') {
+        console.log(state.cartItems);
+        state.cartItems[action.payload.id].cartQun += 1;
+      } else {
+        state.cartItems[action.payload.id].cartQun -= 1;
       }
-       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
-      
+      localStorage.setItem('cartItems', JSON.stringify(state.cartItems));
     },
   },
 });
