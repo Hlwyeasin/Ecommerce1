@@ -5,8 +5,10 @@ import { Bounce, ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FiEye, FiEyeOff } from "react-icons/fi"; // 👁️‍🗨️ Eye icons
 import { Link } from "react-router";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 const login = () => {
+  const auth = getAuth()
   const [emaill, setEmaill] = useState("");
   const [passowrd, setPassword] = useState("");
 
@@ -46,11 +48,21 @@ const login = () => {
       setPasswordErr("Password must be at least 8 characters");
     }
 
-    if (name && emaill && passowrd) {
-      toast.success("Registration Successfully done");
+    if (emaill && passowrd) {
+      signInWithEmailAndPassword(auth, emaill, passowrd)
+  .then((userCredential) => {
+    toast.success("login done")
+   
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    console.log(errorCode);
+    
+    const errorMessage = error.message;
+    console.log(errorMessage);
+    
+  });
     }
-
-    console.log(emaill, name, passowrd);
   };
 
   return (
@@ -75,7 +87,9 @@ const login = () => {
         </div>
 
         <div className="ml-[129px] mt-[125px]">
-          <h2 className="font-medium text-[36px]">Login in to Exclusive</h2>
+          <h2 className="font-medium text-[36px] text-pink-700  border-s-fuchsia-900 border-b ">
+            Login in to Exclusive
+          </h2>
           <p className="font-medium text-base mt-6 leading-6">
             Enter your details below
           </p>
